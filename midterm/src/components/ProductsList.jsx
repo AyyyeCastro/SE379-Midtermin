@@ -13,9 +13,9 @@ const ProductsList = () => {
   }, []);
 
   return (
-    <ul>
+    <ul class="prodList">
       {products.map(product => (
-        <li key={product.id}>
+        <li key={product.id} class="prodItem">
           <Link to={`/products/${product.id}`}>
             <img src={product.image} alt="image.png" class ="thumbnails"/>
             <h2>{product.title}</h2>

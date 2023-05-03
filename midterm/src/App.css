@@ -88,3 +88,22 @@ body {
   height: 150px;
   width: 150px;
 }
+
+.prodList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.prodItem {
+  border: 1px solid black;
+  padding: 1rem;
+  width: calc((100% / 3) - 1rem); /* adjust this value depending on the number of items you want per row */
+}
+
+.prodItem h2 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
