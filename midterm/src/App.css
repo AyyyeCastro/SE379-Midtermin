@@ -107,3 +107,41 @@ body {
   font-size: 1rem;
 }
 
+.prodDetailImage{
+  height: 500px;
+  width: 500px;
+  margin-Right: '1rem' 
+}
+
+.prodContainer{
+  padding: 15px;
+  border-radius: 15px;
+  border: 3px solid black;
+
+}
+
+.prodDesc{
+  padding: 15px;
+  font-size: 20px;
+}
+
+.prodPrice{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+}
+.prodTitle{
+  padding: 15px
+}
+
+.btnBack{
+  color: white;
+  background-color: blue;
+  height: 100%;
+  margin-top: 60%;
+}
+
+.btnNav{
+  height: 30px;
+  width: 50%;
+}

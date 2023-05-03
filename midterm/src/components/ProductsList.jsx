@@ -13,11 +13,11 @@ const ProductsList = () => {
   }, []);
 
   return (
-    <ul class="prodList">
+    <ul className="prodList">
       {products.map(product => (
-        <li key={product.id} class="prodItem">
-          <Link to={`/products/${product.id}`}>
-            <img src={product.image} alt="image.png" class ="thumbnails"/>
+        <li key={product.id} className="prodItem">
+          <Link to={`/product/${product.id}`}>
+            <img src={product.image} alt="image.png" className ="thumbnails"/>
             <h2>{product.title}</h2>
           </Link>
         </li>
