@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #dfdfdf;
+
+}
+
+.button {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #5a31f4;
+  color: white;
+  border: 1px solid #5a31f4;
+  margin: 1rem;
+}
+
+.button:hover {
+  background-color: #8665ff;
+  border-color: #5a31f4;
+}
+
+.button-highlight {
+  background-color: transparent;
+  color: #8665ff;
+}
+
+.button-highlight:hover {
+  background-color: #dcd3ff;
+}
+
+.button:disabled {
+  background-color: #676377;
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 20rem;
+  margin-top: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  z-index: 10;
+  position: fixed;
+  top: 20vh;
+  left: calc(50% - 15rem);
+}
+
+.container {
+  display: grid;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 20rem;
+}
+
+.form-label {
+  margin: 5px 0;
+}
