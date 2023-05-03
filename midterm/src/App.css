@@ -83,3 +83,8 @@ body {
 .form-label {
   margin: 5px 0;
 }
+
+.thumbnails{
+  height: 150px;
+  width: 150px;
+}
