@@ -4,7 +4,7 @@ import { Counter } from "./Counter";
 export const HomePage = () => {
   return (
     <>
-      <div class="main-container">
+      <div className="main-container">
         <p> A M a Z i N G - - CSS -- Featuring Episode 1 Spongebob Script to fill homepage.</p>
         <p>SpongeBob: There it is. The finest eating establishment ever established for eating: The Krusty Krab, home of the Krabby Patty... with a Help Wanted sign in the window. For years I've been dreaming of this moment. I'm gonna go in there, march straight to the manager, look 'em straight in the eye [breaks the fourth wall and looks the audience in the eye], lay it on the line and... I can't do this! [starts to run home, but Patrick stops him.] Hey, Patrick-
 Patrick: Where do you think you're going?
