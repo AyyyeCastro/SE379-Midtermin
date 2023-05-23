@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from "../context/themeContext";
+
+
 
 
 const ProductsList = () => {
-  console.log("Test product list component");
+
+  // THEME
+  const { theme } = useContext(ThemeContext);
+
+  // PRODS
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,12 +20,12 @@ const ProductsList = () => {
   }, []);
 
   return (
-    <ul className="prodList">
+    <ul className="prodList" style={{ color: theme.foreground, background: theme.background, border: theme.border }}>
       {products.map(product => (
-        <li key={product.id} className="prodItem">
+        <li key={product.id} className="prodItem" style={{ color: theme.foreground, background: theme.background, border: theme.border }}> 
           <Link to={`/product/${product.id}`}>
             <img src={product.image} alt="image.png" className ="thumbnails"/>
-            <h2>{product.title}</h2>
+            <h2 style={{ color: theme.color}}>{product.title}</h2>
           </Link>
         </li>
       ))}

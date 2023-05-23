@@ -1,8 +1,14 @@
 import { useParams } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../context/themeContext";
 
 const ProductDetail = () => {
+
+  // THEME
+  const { theme } = useContext(ThemeContext);
+
+
   const [product, setProduct] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
@@ -27,10 +33,11 @@ const ProductDetail = () => {
   }
 
   return (
-    <div style={{ display: "flex" }} className="prodContainer">
+    <div style={{display: "flex", color: theme.foreground, background: theme.background, border: theme.border }} className="prodContainer">
       <button onClick={() => handleShowProducts()} className="btnBack">
         Go Back
       </button>
+      
       <img
         src={product.image}
         alt={product.title}

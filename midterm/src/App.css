@@ -1,46 +1,119 @@
 body {
-  font-family: sans-serif;
-  margin: 3rem;
-  background-color: #dfdfdf;
-
+  transition-duration: 0.2s;
 }
 
-.button {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #5a31f4;
-  color: white;
-  border: 1px solid #5a31f4;
-  margin: 1rem;
+.App a {
+  text-decoration: none; /* remove underline */
+}
+.ocean a {
+  color: #fff;
+  text-decoration: none;
 }
 
-.button:hover {
-  background-color: #8665ff;
-  border-color: #5a31f4;
+/* Header */
+.header {
+  display: flex;
+  height: 50px;
+  background-color: hsl(0, 0%, 100%);
+ 
 }
 
-.button-highlight {
-  background-color: transparent;
-  color: #8665ff;
+.header-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+  padding: 10px 0;
 }
 
-.button-highlight:hover {
-  background-color: #dcd3ff;
-}
-
-.button:disabled {
-  background-color: #676377;
+.main-container {
+  height: 100%;
+  padding: 35px;
 }
 
 .card {
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  width: 20rem;
-  margin-top: 10px;
+  width: 50%;
+  border: none;
+  border: 1px solid #dddddd;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+/* Button */
+.button {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition-duration: 0.1s;
+  background-color: gray;
+}
+
+.button:hover {
+  opacity: 80%;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4d4d4d;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fafafa;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #fafafa;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .flex-column {
@@ -86,43 +159,51 @@ body {
 
 .thumbnails{
   height: 150px;
-  width: 150px;
+  width: 130px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .prodList {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .prodItem {
-  border: 1px solid black;
-  padding: 1rem;
+  padding: 15px;
   width: calc((100% / 3) - 1rem); /* adjust this value depending on the number of items you want per row */
 }
 
 .prodItem h2 {
-  margin-top: 0.5rem;
   font-size: 1rem;
+  padding: 15px;
+  margin-top: 15px;
 }
 
 .prodDetailImage{
   height: 500px;
   width: 500px;
-  margin-Right: '1rem' 
+  margin-Right: '1rem';
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .prodContainer{
+  margin-top: 15px;
   padding: 15px;
   border-radius: 15px;
-  border: 3px solid black;
-
 }
 
 .prodDesc{
   padding: 15px;
   font-size: 20px;
+  border-radius: 15px;
 }
 
 .prodPrice{
@@ -135,13 +216,16 @@ body {
 }
 
 .btnBack{
-  color: white;
-  background-color: blue;
-  height: 100%;
+  color: black;
+  background-color: white;
+  height: 50px;
+  width: 130px;
   margin-top: 60%;
+  border-radius: 15px;
 }
 
 .btnNav{
-  height: 30px;
+  height: 80px;
   width: 50%;
+  border-radius: 15px;
 }
